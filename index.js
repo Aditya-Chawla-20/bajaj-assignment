@@ -10,9 +10,9 @@ app.use(express.json());
 
 // Constants
 const PORT = process.env.PORT || 3000;
-const USER_ID = 'john_doe_17091999'; // Replace with your actual user_id
-const EMAIL = 'john@xyz.com'; // Replace with your actual email
-const ROLL_NUMBER = 'ABCD123'; // Replace with your actual roll number
+const USER_ID = 'aditya_chawla_20012005'; // User ID in the format full_name_ddmmyyyy
+const EMAIL = 'aditya62.be22@chitkara.edu.in'; // User's email
+const ROLL_NUMBER = '2210990062'; // User's roll number
 
 // POST /bfhl endpoint
 app.post('/bfhl', (req, res) => {

@@ -21,9 +21,9 @@ This is a REST API built for the Bajaj Finserv Health Limited (BFHL) assignment.
 ```json
 {
   "is_success": true,
-  "user_id": "john_doe_17091999",
-  "email": "john@xyz.com",
-  "roll_number": "ABCD123",
+  "user_id": "aditya_chawla_20012005",
+  "email": "aditya62.be22@chitkara.edu.in",
+  "roll_number": "2210990062",
   "odd_numbers": ["1"],
   "even_numbers": ["334", "4"],
   "alphabets": ["A", "R"],
