@@ -65,11 +65,9 @@ app.post('/bfhl', (req, res) => {
         // Create concatenated string of alphabets in reverse order with alternating caps
         let concatString = '';
         const allAlphabets = alphabets.join('');
-        
-        for (let i = allAlphabets.length - 1; i >= 0; i--) {
-            const char = allAlphabets[i];
-            // Alternate between uppercase and lowercase based on position
-            concatString += i % 2 === 0 ? char.toLowerCase() : char.toUpperCase();
+        const reversed = allAlphabets.split('').reverse().join('');
+        for (let i = 0; i < reversed.length; i++) {
+            concatString += i % 2 === 0 ? reversed[i].toUpperCase() : reversed[i].toLowerCase();
         }
         
         // Prepare and send response
@@ -94,6 +92,13 @@ app.post('/bfhl', (req, res) => {
             message: 'Internal server error'
         });
     }
+});
+
+// Add GET /bfhl route for help message
+app.get('/bfhl', (req, res) => {
+    res.status(200).json({
+        message: 'This endpoint only supports POST requests. To use, send a POST request with a JSON body like { "data": ["a", "1", "334", "4", "R", "$"] }.'
+    });
 });
 
 // Root route for testing

@@ -6,17 +6,33 @@ This is a REST API built for the Bajaj Finserv Health Limited (BFHL) assignment.
 
 - **Method**: POST
 - **Route**: `/bfhl`
+- **Base URL**: https://bajaj-assignment-xndh.onrender.com
 - **Expected status code for successful requests**: 200
 
-## Request Format
+## How to Test the API
 
+You can test the API using [Postman](https://www.postman.com/), [curl](https://curl.se/), or [Hoppscotch](https://hoppscotch.io/).
+
+### Example Request
+
+POST https://bajaj-assignment-xndh.onrender.com/bfhl
+
+**Request Body:**
 ```json
 {
   "data": ["a", "1", "334", "4", "R", "$"]
 }
 ```
 
-## Response Format
+### Example using curl
+
+```sh
+curl -X POST https://bajaj-assignment-xndh.onrender.com/bfhl \
+  -H "Content-Type: application/json" \
+  -d '{"data": ["a","1","334","4","R", "$"]}'
+```
+
+### Example Response
 
 ```json
 {
@@ -37,7 +53,7 @@ This is a REST API built for the Bajaj Finserv Health Limited (BFHL) assignment.
 
 - Processes an array of data and categorizes elements into numbers (odd/even), alphabets, and special characters
 - Calculates the sum of all numbers
-- Creates a concatenated string of alphabets in reverse order with alternating caps
+- Creates a concatenated string of alphabets in reverse order with alternating caps (starting with uppercase)
 - Returns user information (user_id, email, roll_number)
 
 ## Installation
@@ -45,9 +61,9 @@ This is a REST API built for the Bajaj Finserv Health Limited (BFHL) assignment.
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Create a `.env` file with the following variables:
-   ```
-   PORT=3000
-   ```
+```
+PORT=3000
+```
 4. Start the server: `npm start`
 
 ## Development
@@ -62,10 +78,6 @@ npm run dev
 
 This API can be deployed on various platforms such as Vercel, Railway, Render, or Heroku.
 
-## Testing
+## About
 
-You can test the API using tools like Postman or curl:
-
-```bash
-curl -X POST -H "Content-Type: application/json" -d '{"data": ["a", "1", "334", "4", "R", "$"]}' http://localhost:3000/bfhl
-```
+BFHL API implementation for Bajaj Finserv Health Limited assignment
